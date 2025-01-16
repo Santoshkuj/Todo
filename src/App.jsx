@@ -4,7 +4,6 @@ import TodoList from "./components/TodoList"
 import { createTheme } from "@mui/material"
 import AppLayout from "./components/appLayout/AppLayout"
 import { useState } from "react"
-import WeatherData from "./components/weather/WeatherData"
 
 const App = () => {
 
@@ -13,13 +12,13 @@ const App = () => {
 
     const theme = createTheme({
       palette: {
-        mode: !isDarkMode ? 'dark' : 'light',
+        mode: isDarkMode ? 'dark' : 'light',
         background: {
-          default: isDarkMode ? '#FBFDFC' : '#242424',
-          paper: isDarkMode ? '#dceadd' : '#232323',
+          default: !isDarkMode ? '#FBFDFC' : '#242424',
+          paper: !isDarkMode ? '#dceadd' : '#232323',
         },
         text: {
-          primary: isDarkMode ? '#1B281B' : '#FBFDFC',
+          primary: !isDarkMode ? '#1B281B' : '#FBFDFC',
         },
       },
     });

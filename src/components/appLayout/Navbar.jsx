@@ -29,7 +29,7 @@ const Navbar = ({ handleThemeToggle, handleViewToggle, handleSidebarToggle,viewM
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <IconButton
                 edge="start"
-                // sx={{ color: isDarkMode ? 'white' : 'black', marginRight: 1 }}
+                sx={{ color: isDarkMode ? 'white' : 'black', marginRight: 1 }}
                 aria-label="menu"
                 onClick={handleSidebarToggle}
               >
@@ -52,13 +52,13 @@ const Navbar = ({ handleThemeToggle, handleViewToggle, handleSidebarToggle,viewM
                 onClick={handleViewToggle}
                 sx={{  }}
               >
-                {viewMode === 'list' ? <ViewListIcon /> : <ViewModuleIcon />}
+                {!viewMode === 'list' ? <ViewListIcon /> : <ViewModuleIcon />}
               </IconButton>
               <IconButton
                 onClick={handleThemeToggle}
                 sx={{}}
               >
-                {!isDarkMode ? <LightMode /> : <DarkMode />}
+                {isDarkMode ? <LightMode /> : <DarkMode />}
               </IconButton>
             </Box> }
           </Toolbar>

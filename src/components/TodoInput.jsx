@@ -29,13 +29,13 @@ const TodoInput = ({isDarkMode}) => {
     sx={{
       display: "flex",
       flexDirection: "column",
-      background: isDarkMode ?'linear-gradient(to top,#dce2e0,#f6faf6)' : 'linear-gradient(to top,rgb(20, 36, 27),rgb(40, 58, 47))',
+      background: !isDarkMode ?'linear-gradient(to top,#dce2e0,#f6faf6)' : 'linear-gradient(to top,rgb(20, 36, 27),rgb(40, 58, 47))',
       maxWidth: "100%",
       height: {sm:"180px"},
       paddingLeft: 1,
     }}
   >
-    <div style={{ height: '30px',display: "flex", alignItems: 'center',backgroundColor: !isDarkMode ? '#1B281BB8' : '#f8fbfb', margin: '0', padding: '0',}}>
+    <div style={{ height: '30px',display: "flex", alignItems: 'center',backgroundColor: isDarkMode ? '#1B281BB8' : '#f8fbfb', margin: '0', padding: '0',}}>
       <p>To - Do</p>
       <img src={downArrow} alt="" height={24} width={24}/>
     </div>
@@ -43,7 +43,7 @@ const TodoInput = ({isDarkMode}) => {
     <Typography
       sx={{
         fontWeight: 400,
-        color: !isDarkMode ? "#ffffff" : '#1B281BB8',
+        color: isDarkMode ? "#ffffff" : '#1B281BB8',
         paddingTop: {sm:2},
       }}
     >
