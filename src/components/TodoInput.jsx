@@ -81,9 +81,10 @@ const TodoInput = ({isDarkMode}) => {
     <Button
       type='submit'
       sx={{
-        width: {sm:"100px"},
+        width: {xs:"90px",sm:"100px"},
         padding: 1,
-        fontWeight: 600,
+        fontWeight:600,
+        fontSize: {xs: '12px',sm: '14px'},
         textTransform: "uppercase",
         marginBottom: 1,
         marginRight: 2,

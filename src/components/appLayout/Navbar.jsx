@@ -35,7 +35,7 @@ const Navbar = ({ handleThemeToggle, handleViewToggle, handleSidebarToggle,viewM
               >
                 <MenuIcon />
               </IconButton>
-              <img src={logo} alt="Logo" style={{ height: '32px', width: '90px' }} />
+              <img src={logo} alt="Logo" style={{ height: '30px', width: '90px' }} />
             </Box>
             {isAuthenticated && <WeatherData/>}
             {/* Right side: Search Icon, View Toggle, and Theme Toggle
