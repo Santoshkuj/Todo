@@ -69,7 +69,7 @@ const AppLayout = ({ children, setIsDarkMode, isDarkMode }) => {
           <Sidebar isSidebarOpen={isSidebarOpen} />
         </Box>
         {/* Main content appears beside the sidebar */}
-        <Box sx={{ flexGrow: 1, width: "100%" }}>
+        <Box sx={{ flexGrow: 1, width: "100%"}}>
           {React.Children.map(children, (child) =>
             React.cloneElement(child, { isDarkMode,viewMode })
           )}

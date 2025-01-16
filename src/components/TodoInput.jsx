@@ -31,12 +31,12 @@ const TodoInput = ({isDarkMode}) => {
       flexDirection: "column",
       background: isDarkMode ?'linear-gradient(to top,#dce2e0,#f6faf6)' : 'linear-gradient(to top,rgb(20, 36, 27),rgb(40, 58, 47))',
       maxWidth: "100%",
-      height: "180px",
+      height: {sm:"180px"},
       paddingLeft: 1,
     }}
   >
-    <div style={{ height: '32px',display: "flex", alignItems: 'center',backgroundColor: !isDarkMode ? '#1B281BB8' : '#f8fbfb', margin: '0', padding: '0',}}>
-      <p>TO Do</p>
+    <div style={{ height: '30px',display: "flex", alignItems: 'center',backgroundColor: !isDarkMode ? '#1B281BB8' : '#f8fbfb', margin: '0', padding: '0',}}>
+      <p>To - Do</p>
       <img src={downArrow} alt="" height={24} width={24}/>
     </div>
   
@@ -44,7 +44,7 @@ const TodoInput = ({isDarkMode}) => {
       sx={{
         fontWeight: 400,
         color: !isDarkMode ? "#ffffff" : '#1B281BB8',
-        paddingTop: 2,
+        paddingTop: {sm:2},
       }}
     >
       Add A Task
@@ -62,7 +62,7 @@ const TodoInput = ({isDarkMode}) => {
     },
       }}
     />
-    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',marginTop: '8px',}}>
+    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',marginTop: '7px',}}>
     <Box sx={{maxWidth: '200px', width: '100%',}}>
     <Select
       value={priorityInput}
@@ -81,7 +81,7 @@ const TodoInput = ({isDarkMode}) => {
     <Button
       type='submit'
       sx={{
-        width: "100px",
+        width: {sm:"100px"},
         padding: 1,
         fontWeight: 600,
         textTransform: "uppercase",
