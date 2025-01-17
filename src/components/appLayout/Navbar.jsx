@@ -52,7 +52,7 @@ const Navbar = ({ handleThemeToggle, handleViewToggle, handleSidebarToggle,viewM
                 onClick={handleViewToggle}
                 sx={{  }}
               >
-                {!viewMode === 'list' ? <ViewListIcon /> : <ViewModuleIcon />}
+                {viewMode === 'list' ?<ViewModuleIcon /> : <ViewListIcon /> }
               </IconButton>
               <IconButton
                 onClick={handleThemeToggle}
